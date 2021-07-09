@@ -2,16 +2,29 @@
   {
     "name": "Sal",
     "email": "sal@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "eatsMeat": true,
+    "eatsDairy": true,
+    "eatsFish": false,
+    "eatsGluten": true
   },
   {
     "name": "Lernantino",
     "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "eatsMeat": true,
+    "eatsDairy": false,
+    "eatsFish": true,
+    "eatsGluten": true
   },
   {
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "eatsMeat": false,
+    "eatsDairy": true,
+    "eatsFish": true,
+    "eatsGluten": false
   }
 ]
+
