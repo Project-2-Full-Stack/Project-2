@@ -1,0 +1,73 @@
+<div class='row'>
+  <div class='col-md-6'>
+    <h2>Signup</h2>
+
+    <form class='form signup-form'>
+      <div class='form-group'>
+        <label for='name-signup'>name:</label>
+        <input class='form-input' type='text' id='name-signup' />
+      </div>
+      <div class='form-group'>
+        <label for='email-signup'>email:</label>
+        <input class='form-input' type='text' id='email-signup' />
+      </div>
+      <div class='form-group'>
+        <label for='password-signup'>password:</label>
+        <input class='form-input' type='password' id='password-signup' />
+      </div>
+
+      <div class='form-group'>
+        <p>Do you eat meat?</p>
+        <label>
+          <input type='radio' name='meat' />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='meat' />
+          No
+        </label>
+      </div>
+      <div class='form-group'>
+        <p>Do you eat dairy?</p>
+        <label>
+          <input type='radio' name='dairy' />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='dairy' />
+          No
+        </label>
+      </div>
+      <div class='form-group'>
+        <p>Do you eat fish?</p>
+        <label>
+          <input type='radio' name='fish' />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='fish' />
+          No
+        </label>
+      </div>
+      <div class='form-group'>
+        <p>Do you eat gluten?</p>
+        <label>
+          <input type='radio' name='gluten' />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='gluten' />
+          No
+        </label>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-primary' type='submit'>signup</button>
+      </div>
+    </form>
+    <h3>Already have an account?</h3>
+    {{! <button class='btn btn-primary' id='sign-up'>Create Account</button> }}
+    <a class='btn btn-primary' href='/login'>Login</a>
+  </div>
+</div>
+
+<script src='./js/signup.js'></script>
