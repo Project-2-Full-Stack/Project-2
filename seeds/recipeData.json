@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mapo Tofu",
+    "category": "Asian",
+    "ingredients": "[tofu, mushrooms, garlic, green onions, cornstarch, rice, salt, sugar, chili oil, chili bean paste, sriracha, water]",
+    "details": "Really good food.",
+    "hasMeat": false,
+    "hasDairy": false,
+    "hasFish": false,
+    "hasGluten": false
+  },
+  {
+    "name": "Yakizuke Salmon",
+    "category": "Asian",
+    "ingredients": "[salmon, mushrooms, garlic, green onions, cornstarch, rice, salt, sugar, chili oil, chili bean paste, sriracha, water]",
+    "details": "Salmon is amazing.",
+    "hasMeat": true,
+    "hasDairy": false,
+    "hasFish": true,
+    "hasGluten": false
+  },
+  {
+    "name": "Taiwanese Popcorn Chicken",
+    "category": "Asian",
+    "ingredients": "[chicken, cheese, mushrooms, garlic, green onions, cornstarch, rice, salt, sugar, chili oil, chili bean paste, sriracha, water]",
+    "details": "Popcorn chicken rocks.",
+    "hasMeat": false,
+    "hasDairy": true,
+    "hasFish": false,
+    "hasGluten": false
+  },
+  {
+    "name": "Sous Vide Ribeye",
+    "category": "American",
+    "ingredients": "[ribeye, mushrooms, wheat, garlic, green onions, cornstarch, rice, salt, sugar, chili oil, chili bean paste, sriracha, water]",
+    "details": "Steaks are great",
+    "hasMeat": true,
+    "hasDairy": false,
+    "hasFish": false,
+    "hasGluten": true
+  }
+]
