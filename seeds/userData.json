@@ -18,10 +18,10 @@
     "eatsGluten": true
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345",
-    "eatsMeat": false,
+    "name": "Tiffany",
+    "email": "tdeakin93@gmail.com",
+    "password": "qwertyuiop",
+    "eatsMeat": true,
     "eatsDairy": true,
     "eatsFish": true,
     "eatsGluten": false
