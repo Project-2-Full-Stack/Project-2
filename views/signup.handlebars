@@ -1,72 +1,71 @@
-<div class='row'>
-  <div class='col-md-6'>
-    <h2>Signup</h2>
-
+<div class='row justify-center-md'>
+  <div class='col-md-5 card p-3'>
+    <h2>Create a new account</h2>
     <form class='form signup-form'>
       <div class='form-group'>
-        <label for='name-signup'>name:</label>
+        <label for='name-signup'>Name</label>
         <input class='form-input' type='text' id='name-signup' />
       </div>
       <div class='form-group'>
-        <label for='email-signup'>email:</label>
+        <label for='email-signup'>Email</label>
         <input class='form-input' type='text' id='email-signup' />
       </div>
       <div class='form-group'>
-        <label for='password-signup'>password:</label>
+        <label for='password-signup'>Password</label>
         <input class='form-input' type='password' id='password-signup' />
       </div>
 
-      <div class='form-group'>
+      <div class='form-group radio-container'>
         <p>Do you eat meat?</p>
         <label>
-          <input type='radio' name='meat' value="true"/>
+          <input type='radio' name='meat' value="true" />
           Yes
         </label>
         <label>
-          <input type='radio' name='meat' value="false"/>
+          <input type='radio' name='meat' value="false" />
           No
         </label>
       </div>
-      <div class='form-group'>
+      <div class='form-group radio-container'>
         <p>Do you eat dairy?</p>
         <label>
-          <input type='radio' name='dairy' value="true"/>
+          <input type='radio' name='dairy' value="true" />
           Yes
         </label>
         <label>
-          <input type='radio' name='dairy' value="false"/>
+          <input type='radio' name='dairy' value="false" />
           No
         </label>
       </div>
-      <div class='form-group'>
+      <div class='form-group radio-container'>
         <p>Do you eat fish?</p>
         <label>
-          <input type='radio' name='fish' value="true"/>
+          <input type='radio' name='fish' value="true" />
           Yes
         </label>
         <label>
-          <input type='radio' name='fish' value="false"/>
+          <input type='radio' name='fish' value="false" />
           No
         </label>
       </div>
-      <div class='form-group'>
+      <div class='form-group radio-container'>
         <p>Do you eat gluten?</p>
         <label>
-          <input type='radio' name='gluten'  value="true"/>
+          <input type='radio' name='gluten' value="true" />
           Yes
         </label>
         <label>
-          <input type='radio' name='gluten' value="false"/>
+          <input type='radio' name='gluten' value="false" />
           No
         </label>
       </div>
-      <div class='form-group'>
-        <button class='btn btn-primary' type='submit'>signup</button>
+      <div class='form-group pt-3'>
+        <button class='btn btn-info btn-lg btn-block' type='submit'>Create Account</button>
       </div>
     </form>
-    <h3>Already have an account?</h3>
-    {{! <button class='btn btn-primary' id='sign-up'>Create Account</button> }}
-    <a class='btn btn-primary' href='/login'>Login</a>
+    <hr class="my-4">
+
+    <p>Already have an account?<strong><a href='/login'> Log in here</a></strong></p>
   </div>
 </div>
 

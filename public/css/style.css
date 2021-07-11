@@ -22,3 +22,14 @@ header, .recipe:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.radio-container{
+  display: grid !important;
+  grid-template-columns: 9fr 1.5fr 1.5fr;
+}
+
+.radio-container p, .radio-container label{
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  line-height: 1;
+}

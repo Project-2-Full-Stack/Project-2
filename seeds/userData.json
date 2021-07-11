@@ -25,6 +25,15 @@
     "eatsDairy": true,
     "eatsFish": true,
     "eatsGluten": false
+  },
+  {
+    "name": "Alap Raval",
+    "email": "alapsraval@gmail.com",
+    "password": "password",
+    "eatsMeat": false,
+    "eatsDairy": true,
+    "eatsFish": false,
+    "eatsGluten": false
   }
 ]
 
