@@ -1,48 +1,64 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
-
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+<div class='row justify-center-md'>
+  <div class='col-md-5 card p-3'>
+    <h2>Your preferences</h2>
+    <form class='form signup-form'>
+      <div class='form-group'>
+        <label for='name-signup'>Name</label>
+        <input class='form-input' type='text' id='name-signup' readonly value="{{name}}" />
       </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      <div class='form-group'>
+        <label for='email-signup'>Email</label>
+        <input class='form-input' type='text' id='email-signup' readonly value="{{email}}" />
       </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      <div class='form-group radio-container pt-3'>
+        <p>Do you eat meat?</p>
+        <label>
+          <input type='radio' name='meat' value="true" {{#if eatsMeat}}checked{{/if}} />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='meat' value="false" {{#unless eatsMeat}}checked{{/unless}} />
+          No
+        </label>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+      <div class='form-group radio-container'>
+        <p>Do you eat dairy?</p>
+        <label>
+          <input type='radio' name='dairy' value="true" {{#if eatsDairy}}checked{{/if}} />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='dairy' value="false" {{#unless eatsDairy}}checked{{/unless}} />
+          No
+        </label>
+      </div>
+      <div class='form-group radio-container'>
+        <p>Do you eat fish?</p>
+        <label>
+          <input type='radio' name='fish' value="true" {{#if eatsFish}}checked{{/if}} />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='fish' value="false" {{#unless eatsFish}}checked{{/unless}} />
+          No
+        </label>
+      </div>
+      <div class='form-group radio-container'>
+        <p>Do you eat gluten?</p>
+        <label>
+          <input type='radio' name='gluten' value="true" {{#if eatsGluten}}checked{{/if}} />
+          Yes
+        </label>
+        <label>
+          <input type='radio' name='gluten' value="false" {{#unless eatsGluten}}checked{{/unless}} />
+          No
+        </label>
+      </div>
+      <div class='form-group pt-3'>
+        <button class='btn btn-info btn-lg btn-block' type='submit' disabled>Update Preferences</button>
       </div>
     </form>
   </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
 </div>
 
 <script src="./js/preferences.js"></script>
