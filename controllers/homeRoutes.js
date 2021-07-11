@@ -3,7 +3,14 @@ const { Recipe, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+    return;
+  }
+
   try {
+
     // Get all recipes and JOIN with user data
     // TODO: update to JOIN what's in fridge
     const recipeData = await Recipe.findAll(
@@ -55,7 +62,7 @@ router.get('/recipe/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/preferences', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -65,7 +72,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('preferences', {
       ...user,
       logged_in: true,
     });
@@ -77,10 +84,10 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   // TODO: Eventually reroute to getRecipe page
-  // if (req.session.logged_in) {
-  //   res.redirect('/profile');
-  //   return;
-  // }
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
 
   res.render('login');
 });
