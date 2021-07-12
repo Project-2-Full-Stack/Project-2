@@ -1,47 +1,25 @@
-const newFormHandler = async (event) => {
+const updatePreferenceHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const eatsMeat = document.querySelector('input[name="meat"]:checked').value || false;
+  const eatsDairy = document.querySelector('input[name="dairy"]:checked').value || false;
+  const eatsFish = document.querySelector('input[name="fish"]:checked').value || false;
+  const eatsGluten = document.querySelector('input[name="gluten"]:checked').value || false;
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (response.ok) {
-      document.location.replace('/preferences');
-    } else {
-      alert('Failed to create project');
-    }
+  const response = await fetch(`/api/users/update`, {
+    method: 'PUT',
+    body: JSON.stringify({ eatsMeat, eatsDairy, eatsFish, eatsGluten }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  if (response.ok) {
+    alert('Preferences updated.');
+  } else {
+    alert(response.statusText);
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/preferences');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-};
-
-// document
-//   .querySelector('.new-project-form')
-//   .addEventListener('submit', newFormHandler);
-
-// document
-//   .querySelector('.project-list')
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('#update-preference-btn')
+  .addEventListener('click', updatePreferenceHandler);
