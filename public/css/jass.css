@@ -1083,6 +1083,7 @@ a:hover {
 .card {
   border: 1px solid #1a1a1a;
   margin-bottom: 1rem;
+  background-color: #faf5f5;
 }
 
 .card .card-header {
@@ -1180,6 +1181,11 @@ form [type='radio'] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.flex-child {
+  flex: 1;
+  background-color: #ffffff
 }
 
 .flex-column {

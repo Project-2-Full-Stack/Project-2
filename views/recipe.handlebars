@@ -1,13 +1,25 @@
-<div class="text-center">
+<div class="card card-rounded text-center">
   <h2>{{name}}</h2>
   <img src={{imgUrl}}>
   <p>{{details}}</p>
-  <p>Type of Cuisine: {{category}}</p>
-  <p>Cook Time: {{cookTime}} min.</p>
-  <p>Prep Time: {{prepTime}} min.</p>
-  <p>Marinade Time: {{marinadeTime}} min.</p>
-  <p>Servings: {{servings}}</p>
-  <p>INGREDIENTS: {{{ingredientsHtml}}}</p>
-  <p>INSTRUCTIONS: {{{instructions}}}</p>
-  <p>Notes: {{{notes}}}</p>
+  <p><strong>Type of Cuisine: </strong>{{category}}</p>
+  <p><strong>Cook Time: </strong>{{cookTime}} min.</p>
+  <p><strong>Prep Time: </strong>{{prepTime}} min.</p>
+  <p><strong>Marinade Time: </strong>{{marinadeTime}} min.</p>
+  <p><strong>Servings: </strong>{{servings}}</p>
 </div>
+<div class="card card-rounded flex-column p-3">
+    <div class="card card-rounded flex-child">
+      <h5 class="text-center">INGREDIENTS: </h3>    
+      {{{ingredientsHtml}}}
+    </div>
+    <div class="card card-rounded flex-child">
+      <h5 class="text-center">INSTRUCTIONS: </h5>
+      {{{instructions}}}
+    </div>
+    <div class="card card-rounded flex-child">
+      <h5 class="text-center">Notes: </h5>
+      {{{notes}}}
+    </div>
+</div>
+
