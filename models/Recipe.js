@@ -47,6 +47,36 @@ Recipe.init(
       allowNull: false,
       defaultValue: false,
     },
+    cookTime: {
+      type: DataTypes.SMALLINT,
+    },
+    prepTime: {
+      type: DataTypes.SMALLINT,
+    },
+    marinadeTime: {
+      type: DataTypes.SMALLINT,
+    },
+    servings: {
+      type: DataTypes.TINYINT,
+    },
+    ingredients: {
+      type: DataTypes.STRING,
+    },
+    imgUrl: {
+      type: DataTypes.STRING(1000),
+    },
+    recipeUrl: {
+      type: DataTypes.STRING(1000),
+    },
+    ingredientsHtml: {
+      type: DataTypes.STRING(1000),
+    },
+    instructions: {
+      type: DataTypes.STRING(1000),
+    },
+    notes: {
+      type: DataTypes.STRING(1000),
+    },
   },
   {
     sequelize,
