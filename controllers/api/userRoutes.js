@@ -16,6 +16,27 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/update', async (req, res) => {
+  try {
+    const userData = await User.update(
+      {
+        eatsMeat: req.body.eatsMeat,
+        eatsDairy: req.body.eatsDairy,
+        eatsFish: req.body.eatsFish,
+        eatsGluten: req.body.eatsGluten,
+      },
+      {
+        where: {
+          id: req.session.user_id,
+        },
+      }
+    );
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -39,7 +60,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
