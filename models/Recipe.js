@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Recipe extends Model {}
+class Recipe extends Model { }
 
 Recipe.init(
   {
@@ -58,9 +58,6 @@ Recipe.init(
     },
     servings: {
       type: DataTypes.TINYINT,
-    },
-    ingredients: {
-      type: DataTypes.STRING,
     },
     imgUrl: {
       type: DataTypes.STRING(1000),
