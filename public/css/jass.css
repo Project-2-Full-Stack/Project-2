@@ -980,16 +980,20 @@ a:hover {
   border: 1px solid transparent;
   outline: none;
   color: #1a1a1a;
-  background-color: #aeaeae;
+  background-color: #dedede;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #cecece;
+  background-color: #ddffdd;
 }
 
 .btn.btn-squared {
   border-radius: 0;
+}
+
+.btn.btn-border {
+  border: 2px solid #444;
 }
 
 .btn.btn-sm {
@@ -1036,7 +1040,7 @@ a:hover {
 }
 
 .btn.btn-light {
-  background-color: #d9e9e8;
+  background-color: #d9d9d9;
   color: #1a1a1a;
 }
 
@@ -1107,6 +1111,10 @@ a:hover {
 
 .card.card-rounded .card-header {
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.card img {
+  height: 250px;
 }
 
 form {

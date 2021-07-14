@@ -46,7 +46,7 @@ header, .recipe:not(:last-child) {
   width: 0;
 }
 
-.radio-toolbar label {
+/* .radio-toolbar label {
     display: inline-block;
     background-color: #ddd;
     padding: 10px 20px;
@@ -58,7 +58,7 @@ header, .recipe:not(:last-child) {
 
 .radio-toolbar label:hover {
   background-color: #dfd;
-}
+} */
 
 .radio-toolbar input[type="radio"]:focus + label {
     border: 2px dashed #444;
