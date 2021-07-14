@@ -1,6 +1,28 @@
 const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
+const { Op } = require("sequelize");
+
+router.post('/', async (req, res) => {
+  const body = req.body;
+  try {
+
+    const recipeData = await Recipe.findAll({
+      where: {
+        category: body.category,
+        ingredients: {
+          [Op.like]: `%${body.ingredients}%`
+        }
+      }
+    });
+
+    // TODO: replace 0 with random number between 0 and recipeData.length
+    const recipes = recipeData[0].get({ plain: true })
+    res.status(200).json(recipes);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 router.post('/', withAuth, async (req, res) => {
   try {

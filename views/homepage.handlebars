@@ -1,18 +1,100 @@
-<!-- Loop over each object in the recipes array -->
-{{#each recipes as |recipe| }}
-<div class="row mb-4 recipe">
-  <div class="col-md-5">
-    <p>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{!-- TODO: change to show surprise me button where they can generate a random recipe --}}
-      {{{get_emoji}}}
-      <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
-    </p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{recipe.details}}
-    </p>
+<div id="cuisine-selection" class="row justify-center-md">
+  <div class="col-md-8 radio-button">
+    <p>What do you feel like?</p>
+    <label>
+      <input type='radio' name='cuisine' value="american" />
+      American
+    </label>
+    <label>
+      <input type='radio' name='cuisine' value="asian" />
+      Asian
+    </label>
+    <label>
+      <input type='radio' name='cuisine' value="indian" />
+      Indian
+    </label>
+    <label>
+      <input type='radio' name='cuisine' value="italian" />
+      Italian
+    </label>
+    <label>
+      <input type='radio' name='cuisine' value="mexican" />
+      Mexican
+    </label>
+    <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
+    <div class='form-group pt-3 text-center'>
+      <a class='btn btn-dark btn-lg' id='next-btn' href="#ingredient-selection">Next</a>
+    </div>
   </div>
 </div>
-{{/each}}
+<div id="ingredient-selection" class="row mt-5 justify-center-md">
+  <div class="col-md-8 radio-button">
+    <p>What do you have in your fridge?</p>
+    <div class="row">
+      <div class="col-md-3">
+        <p>Dairy</p>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="butter">
+          Butter
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="cheese">
+          Cheese
+        </label>
+      </div>
+      <div class="col-md-3">
+        <p>Protein</p>
+
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="shrimp">
+          Shrimp
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="tofu">
+          Tofu
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="salmon">
+          Salmon
+        </label>
+      </div>
+      <div class="col-md-3">
+        <p>Produce</p>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="onion">
+          Green Onion
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="garlic">
+          Garlic
+        </label>
+      </div>
+      <div class="col-md-3">
+        <p>Starch</p>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="corn">
+          Corn Starch
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="rice">
+          Rice
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="ingredient" value="flour">
+          All Purpose Flour
+        </label>
+      </div>
+    </div>
+
+    <div class="pt-3">
+      <p>I don't feel like looking into my fridge</p>
+      <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
+    </div>
+
+    <div class='form-group pt-3 text-center'>
+      <a class='btn btn-info btn-lg' id='get-recipe-btn' type='submit'>Lets Eat!</a>
+    </div>
+  </div>
+</div>
+
+<script src="./js/recipe.js"></script>
