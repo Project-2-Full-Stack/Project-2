@@ -57,7 +57,7 @@ Recipe.init(
       type: DataTypes.SMALLINT,
     },
     servings: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.STRING,
     },
     imgUrl: {
       type: DataTypes.STRING(1000),
@@ -66,10 +66,10 @@ Recipe.init(
       type: DataTypes.STRING(1000),
     },
     ingredientsHtml: {
-      type: DataTypes.STRING(1000),
+      type: DataTypes.STRING(5000),
     },
     instructions: {
-      type: DataTypes.STRING(1000),
+      type: DataTypes.STRING(5000),
     },
     notes: {
       type: DataTypes.STRING(1000),
