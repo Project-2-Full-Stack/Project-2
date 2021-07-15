@@ -1,17 +1,38 @@
 <div id='cuisine-selection' class='row justify-center-md'>
   <div class='col-md-8 radio-button radio-toolbar'>
-    <p>What do you feel like?</p>
-    <input type='radio' id='american' name='cuisine' value='american' />
-    <label for='american' class='btn btn-border'>American</label>
-    <input type='radio' id='asian'name='cuisine' value='asian' />
-    <label for='asian' class='btn btn-border'>Asian</label>
-    <input type='radio' id='indian' name='cuisine' value='indian' />
-    <label for='indian' class='btn btn-border'>Indian</label>
-    <input type='radio' id='italian' name='cuisine' value='italian' />
-    <label for='italian'class='btn btn-border'>Italian</label>
-    <input type='radio' id='mexican' name='cuisine' value='mexican' />
-    <label for='mexican' class='btn btn-border'>Mexican</label>
-    <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
+    <h4>What kind of cuisine are you in the mood for?</h4>
+    <div class='flex-row'>
+      <span class='p-2'>
+        <input type='radio' id='american' name='cuisine' value='american' />
+        <label for='american' class='btn btn-border'>American</label>
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='asian'name='cuisine' value='asian' />
+        <label for='asian' class='btn btn-border'>Asian</label>
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='indian' name='cuisine' value='indian' />
+        <label for='indian' class='btn btn-border'>Indian</label>
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='italian' name='cuisine' value='italian' />
+        <label for='italian'class='btn btn-border'>Italian</label>  
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='mexican' name='cuisine' value='mexican' />
+        <label for='mexican' class='btn btn-border'>Mexican</label>
+      </span>
+      {{!-- TODO - make this button work --}}
+      <span class='p-2'>
+        <input type='radio' id='a' name='cuisine' value='a' />
+        <label for='' class='btn btn-border'>I'm Not Picky</label>
+      </span>
+
+      {{!-- <span class='p-2'>
+        <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
+      </span> --}}
+    </div>
+
     <div class='form-group pt-3 text-center'>
       <a
         class='btn btn-dark btn-lg'
