@@ -4,7 +4,10 @@
     <div class='flex-row'>
       <span class='p-6 american'>
         <input type='radio' id='american' name='cuisine' value='american' />
-        <label for='american' class='btn btn-border american btn-cusine'>American</label>
+        <label
+          for='american'
+          class='btn btn-border american btn-cusine'
+        >American</label>
       </span>
       <span class='p-6 asian'>
         <input type='radio' id='asian' name='cuisine' value='asian' />
@@ -12,34 +15,48 @@
       </span>
       <span class='p-6 indian'>
         <input type='radio' id='indian' name='cuisine' value='indian' />
-        <label for='indian' class='btn btn-border indian btn-cusine'>Indian</label>
+        <label
+          for='indian'
+          class='btn btn-border indian btn-cusine'
+        >Indian</label>
       </span>
       <span class='p-6 italian'>
         <input type='radio' id='italian' name='cuisine' value='italian' />
-        <label for='italian' class='btn btn-border italian btn-cusine'>Italian</label>
+        <label
+          for='italian'
+          class='btn btn-border italian btn-cusine'
+        >Italian</label>
       </span>
       <span class='p-6 mexican'>
         <input type='radio' id='mexican' name='cuisine' value='mexican' />
-        <label for='mexican' class='btn btn-border mexican btn-cusine'>Mexican</label>
+        <label
+          for='mexican'
+          class='btn btn-border mexican btn-cusine'
+        >Mexican</label>
       </span>
-      {{!-- TODO - make this button work --}}
+      {{! TODO - make this button work }}
       <span class='p-6'>
         <input type='radio' id='a' name='cuisine' value='a' />
-        <label for='' class='btn-recipe btn-border picky btn-cusine'>I'm Not Picky</label>
+        <label for='a' class='btn btn-recipe btn-border picky btn-cusine'>I'm Not
+          Picky</label>
       </span>
 
-      {{!-- <span class='p-2'>
+      {{! <span class='p-2'>
         <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
-      </span> --}}
+      </span> }}
     </div>
 
     <div class='form-group pt-3 text-center'>
-      <a class='btn btn-dark btn-lg' id='next-btn' href='#ingredient-selection'>Next</a>
+      <a
+        class='btn btn-dark btn-lg'
+        id='next-btn'
+        href='#ingredient-selection'
+      >Next</a>
     </div>
   </div>
 </div>
 
-{{!-- These are the ingredient checkboxes for what's in the user's fridge --}}
+{{! These are the ingredient checkboxes for what's in the user's fridge }}
 <div id='ingredient-selection' class='row mt-5 justify-center-md'>
   <div class='col-md-8 radio-button'>
     <h4>What do you currently have in your fridge and pantry?</h4>
@@ -132,8 +149,11 @@
 
     <div class='pt-4'>
       <h5>I don't feel like looking in my fridge and pantry</h5>
-      <button class='btn btn-primary p-3 ' id='surprise-btn' type='submit'>Surprise
-        Me!</button>
+      <button
+        class='btn btn-primary p-3'
+        id='surprise-btn'
+        type='submit'
+      >Surprise Me!</button>
     </div>
 
     <div class='form-group pt-5 text-center'>

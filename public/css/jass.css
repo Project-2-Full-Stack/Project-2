@@ -337,7 +337,7 @@ template {
   display: none;
 }
 
-/* 
+/*
 =================
 END NORMALIZE CSS
 =================
@@ -356,7 +356,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 16px;
   color: #1a1a1a;
 }
@@ -697,7 +698,7 @@ a:hover {
   padding: 1.625rem;
 }
 
-.p-6{
+.p-6 {
   padding: 32px 16px;
   height: 360px;
   width: 350px;
@@ -705,7 +706,6 @@ a:hover {
   margin-right: 15px;
   margin-left: 15px;
 }
-
 
 /* padding-bottom */
 .pb-0 {
@@ -1003,7 +1003,7 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #ddffdd;
+  background-color: #848874;
 }
 
 .btn.btn-squared {
@@ -1012,7 +1012,7 @@ a:hover {
 
 /* cuisine btns */
 
-.btn.btn-cusine{
+.btn.btn-cusine {
   border: 3px solid #444;
   padding: 150px 150px;
   height: 50px;
@@ -1040,11 +1040,20 @@ a:hover {
 
 /* im not picky btn */
 
-.btn.btn-border.picky{
+.btn.btn-border.picky {
   background-image: url(https://media.tenor.com/images/0c19b2cfdb668ab5c54ef090a8bbf12e/tenor.gif);
-  font-size: xx-large;
+
+  /* font-size: xx-large;
   font-weight: bolder;
-  font-display: center;
+  text-align: center;
+  border: 3px solid #444; */
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 3px solid #444;
+  outline: white;
+  color: #1a1a1a;
+  background-color: #b3b0b0;
 }
 
 .btn.btn-border {
@@ -1226,8 +1235,8 @@ form [type='radio'] {
   display: inline-block;
 }
 
-label form [type='checkbox'], label
-form [type='radio'] {
+label form [type='checkbox'],
+label form [type='radio'] {
   display: inline-block;
 }
 
@@ -1251,7 +1260,7 @@ form [type='radio'] {
 
 .flex-child {
   flex: 1;
-  background-color: #ffffff
+  background-color: #ffffff;
 }
 
 .flex-column {
