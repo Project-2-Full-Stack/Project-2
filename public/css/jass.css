@@ -1057,7 +1057,6 @@ a:hover {
 .btn.btn-bottom{
   display: block;
     position: absolute;
-    bottom: 40px;
     right: 40px;
 }
 
