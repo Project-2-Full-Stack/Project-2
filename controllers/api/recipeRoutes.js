@@ -3,6 +3,17 @@ const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { Op } = require("sequelize");
 
+let getRandomNumber = (max) => {
+  return Math.floor(Math.random() * max);
+}
+
+// let generateOrStatements = (ingredients) => {
+//   let finalArray = [];
+//   for (let i = 0; i < ingredients.length; i++) {
+//     `%${ingredients[i]}%`
+//   }
+// }
+
 router.post('/', async (req, res) => {
   const body = req.body;
   try {
@@ -10,28 +21,28 @@ router.post('/', async (req, res) => {
     const recipeData = await Recipe.findAll({
       where: {
         category: body.category,
-        ingredients: {
-          [Op.like]: `%${body.ingredients}%`
-        }
+        [Op.or]: [
+          {
+            ingredients: {
+              [Op.like]: `%${body.ingredients[0]}%`
+            }
+          },
+          {
+            ingredients: {
+              [Op.like]: `%${body.ingredients[1]}%`
+            }
+          },
+          {
+            ingredients: {
+              [Op.like]: `%${body.ingredients[2]}%`
+            }
+          }
+        ]
       }
     });
-
     // TODO: replace 0 with random number between 0 and recipeData.length
-    const recipes = recipeData[0].get({ plain: true })
-    res.status(200).json(recipes);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newRecipe = await Recipe.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-
-    res.status(200).json(newRecipe);
+    const recipe = recipeData[getRandomNumber(recipeData.length - 1)].get({ plain: true })
+    res.status(200).json(recipe);
   } catch (err) {
     res.status(400).json(err);
   }
