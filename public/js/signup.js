@@ -12,12 +12,12 @@ const signupFormHandler = async (event) => {
   if (name && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password, eatsMeat, eatsDairy, eatsFish, eatsGluten}),
+      body: JSON.stringify({ name, email, password, eatsMeat, eatsDairy, eatsFish, eatsGluten }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/preferences');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
