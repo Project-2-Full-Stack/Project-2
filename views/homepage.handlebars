@@ -42,12 +42,14 @@
     </div>
   </div>
 </div>
+
+{{!-- These are the ingredient checkboxes for what's in the user's fridge --}}
 <div id='ingredient-selection' class='row mt-5 justify-center-md'>
   <div class='col-md-8 radio-button'>
-    <p>What do you have in your fridge?</p>
-    <div class='row'>
-      <div class='col-md-3'>
-        <p>Dairy</p>
+    <h4>What do you currently have in your fridge and pantry?</h4>
+    <div class='flex-row'>
+      <div class='col-md-3 flex-column p-2'>
+        <p>Dairy:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='butter' />
           Butter
@@ -56,58 +58,89 @@
           <input type='checkbox' name='ingredient' value='cheese' />
           Cheese
         </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='cream' />
+          Cream
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='yogurt' />
+          Yogurt
+        </label>
       </div>
-      <div class='col-md-3'>
-        <p>Protein</p>
-
+      <div class='col-md-3 flex-column p-2'>
+        <p>Protein:</p>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='chicken' />
+          Chicken
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='egg' />
+          Eggs
+        </label>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='shrimp' />
           Shrimp
         </label>
         <label class='checkbox'>
-          <input type='checkbox' name='ingredient' value='tofu' />
-          Tofu
-        </label>
-        <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='salmon' />
           Salmon
         </label>
-      </div>
-      <div class='col-md-3'>
-        <p>Produce</p>
         <label class='checkbox'>
-          <input type='checkbox' name='ingredient' value='onion' />
-          Green Onion
+          <input type='checkbox' name='ingredient' value='tofu' />
+          Tofu
         </label>
+      </div>
+      <div class='col-md-3 flex-column p-2'>
+        <p>Produce:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='garlic' />
           Garlic
         </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='ginger' />
+          Ginger
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='lemon' />
+          Lemon
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='onion' />
+          Onion
+        </label> 
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='tomato' />
+          Tomato
+        </label>
       </div>
-      <div class='col-md-3'>
-        <p>Starch</p>
+     <div class='col-md-3 flex-column p-2'>
+        <p>Starch:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='corn' />
           Corn Starch
         </label>
         <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='flour' />
+          Flour
+        </label>
+        <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='rice' />
           Rice
         </label>
-        <label class='checkbox'>
-          <input type='checkbox' name='ingredient' value='flour' />
-          All Purpose Flour
+          <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='pasta' />
+          Pasta
         </label>
       </div>
     </div>
 
-    <div class='pt-3'>
-      <p>I don't feel like looking into my fridge</p>
-      <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise
+    <div class='pt-4'>
+      <h5>I don't feel like looking in my fridge and pantry</h5>
+        <button class='btn btn-primary p-3 ' id='surprise-btn' type='submit'>Surprise
         Me!</button>
     </div>
 
-    <div class='form-group pt-3 text-center'>
+    <div class='form-group pt-5 text-center'>
       <a class='btn btn-info btn-lg' id='get-recipe-btn' type='submit'>Lets Eat!</a>
     </div>
   </div>
