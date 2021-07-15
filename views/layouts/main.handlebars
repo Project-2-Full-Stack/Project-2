@@ -11,7 +11,7 @@
 
 <body>
   <div class='flex-column justify-space-around'>
-    <header class='display-flex justify-space-between align-center p-2'>
+    <header class='bg-info display-flex justify-space-between align-center p-2'>
       <h3>
         <span role='img' aria-label='money'>💸</span>
         <a href='/' class="text-primary text-decoration-none">Thyme is Money</a>
@@ -19,9 +19,9 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href='/preferences'>Preferences</a>
+        <a class="text-white" href='/preferences'>Preferences</a>
         |
-        <button class='no-button' id='logout'>Logout</button>
+        <button class='no-button text-white' id='logout'>Logout</button>
         {{/if}}
       </nav>
     </header>
