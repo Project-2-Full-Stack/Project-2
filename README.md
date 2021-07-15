@@ -32,5 +32,6 @@ Thyme is Money is an application that helps the user to solve the age-old questi
 ## License
   Licensed under the MIT license
 
-<!-- TODO: INPUT SCREENSHOT HERE OF FINISHED PROJECT -->
-<!-- ![thyme is money screenshot 1](./assets/images/beatwave-screen-1.png) -->
+
+![thyme is money signup](./public/image/proj2-signup.JPG)
+![thyme is money login](./public/image/proj2-login.JPG)
