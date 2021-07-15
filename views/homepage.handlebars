@@ -1,29 +1,23 @@
 <div id='cuisine-selection' class='row justify-center-md'>
-  <div class='col-md-8 radio-button donate-now radio-toolbar'>
+  <div class='col-md-8 radio-button radio-toolbar'>
     <p>What do you feel like?</p>
-    <label class="btn btn-border">
-      <input type='radio' name='cuisine' value='american' />
-      American
-    </label>
-    <label class="btn btn-border">
-      <input type='radio' name='cuisine' value='asian' />
-      Asian
-    </label>
-    <label class="btn btn-border">
-      <input type='radio' name='cuisine' value='indian' />
-      Indian
-    </label>
-    <label class="btn btn-border">
-      <input type='radio' name='cuisine' value='italian' />
-      Italian
-    </label>
-    <label class="btn btn-border">
-      <input type='radio' name='cuisine' value='mexican' />
-      Mexican
-    </label>
+    <input type='radio' id='american' name='cuisine' value='american' />
+    <label for='american' class='btn btn-border'>American</label>
+    <input type='radio' id='asian'name='cuisine' value='asian' />
+    <label for='asian' class='btn btn-border'>Asian</label>
+    <input type='radio' id='indian' name='cuisine' value='indian' />
+    <label for='indian' class='btn btn-border'>Indian</label>
+    <input type='radio' id='italian' name='cuisine' value='italian' />
+    <label for='italian'class='btn btn-border'>Italian</label>
+    <input type='radio' id='mexican' name='cuisine' value='mexican' />
+    <label for='mexican' class='btn btn-border'>Mexican</label>
     <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
     <div class='form-group pt-3 text-center'>
-      <a class='btn btn-dark btn-lg' id='next-btn' href='#ingredient-selection'>Next</a>
+      <a
+        class='btn btn-dark btn-lg'
+        id='next-btn'
+        href='#ingredient-selection'
+      >Next</a>
     </div>
   </div>
 </div>

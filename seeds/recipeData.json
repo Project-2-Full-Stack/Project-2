@@ -22,7 +22,7 @@
   {
     "id": "2",
     "name": "Mapo Tofu",
-    "category": "Chinese",
+    "category": "Asian",
     "details": "Spicy, delicious mapo tofu is usually made with ground pork, but for this vegan recipe, we use chopped shiitake mushrooms and haven't sacrificed any umami!",
     "ingredients": "tofu, mushroom, garlic, green onion, corn starch, rice, salt, sugar, chili, sriracha, water",
     "hasMeat": false,
@@ -41,7 +41,7 @@
   {
     "id": "3",
     "name": "Yakizuke Salmon",
-    "category": "Japanese",
+    "category": "Asian",
     "details": "A dish commonly prepared by fisherman ",
     "ingredients": "salmon, green onion, bell pepper, kombu, mirin, vegetable oil, soy sauce, ponzu, rice vinegar, rice wine, corn starch",
     "hasMeat": true,
@@ -61,7 +61,7 @@
   {
     "id": "4",
     "name": "Taiwanese Popcorn Chicken",
-    "category": "Chinese",
+    "category": "Asian",
     "details": "Fried delicious chunks of chicken!",
     "ingredients": "chicken, salt, black pepper, sugar, corn starch, basil, soy sauce, chilil, hoisin sauce, garlic, egg",
     "hasMeat": true,

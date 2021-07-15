@@ -61,7 +61,7 @@ header, .recipe:not(:last-child) {
 } */
 
 .radio-toolbar input[type="radio"]:focus + label {
-    border: 2px dashed #444;
+    border: 2px solid #444;
 }
 
 .radio-toolbar input[type="radio"]:checked + label {
