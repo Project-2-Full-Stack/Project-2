@@ -1054,6 +1054,13 @@ a:hover {
   color: #1a1a1a;
 }
 
+.btn.btn-bottom{
+  display: block;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
 .btn.btn-border {
   border: 3px solid #444;
 }
@@ -1157,8 +1164,13 @@ a:hover {
 
 .card .card-header {
   padding: 0.375rem;
-  background-color: #2d3e50;
+  background-color: #1bbc9b;
   color: #d9e9e8;
+}
+
+.card .card-header a{
+  color: #d9e9e8;
+  font-weight: 600;
 }
 
 .card .card-body {

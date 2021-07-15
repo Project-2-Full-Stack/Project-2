@@ -50,8 +50,12 @@ let generateRecipeList = (recipes) => {
         console.log(recipes[i]);
         recipesEl.innerHTML += `<div class="card my-5">
         <div class="card-header"><a href="/recipe/${recipes[i].id}">${recipes[i].name}</a></div>
-        <div class="card-body"><img src=${recipes[i].imgUrl}>${recipes[i].details}</div>
-        <div class="card-footer">Yum/Yup button</div>
+        <div class="card-body flex-row">
+        <div class="flex-child p-2"><img src=${recipes[i].imgUrl}></div>
+        <div class="flex-child flex-grow-6 p-2">${recipes[i].details}<br>
+        <a class='btn btn-info btn-sm btn-bottom' href="/recipe/${recipes[i].id}"> View </a>
+        </div>
+        </div>
       </div>`;
     }
 }
