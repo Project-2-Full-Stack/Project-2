@@ -70,3 +70,10 @@ header,
   background-color: #848874;
   /* border-color: rgb(238, 238, 238); */
 }
+
+.section-break{
+  margin-top: 300px;
+  margin-bottom: 300px;
+  border: 1px black solid;
+
+}
