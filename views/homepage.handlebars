@@ -4,28 +4,28 @@
     <div class='flex-row'>
       <span class='p-6 american'>
         <input type='radio' id='american' name='cuisine' value='american' />
-        <label for='american' class='btn btn-border american'>American</label>
+        <label for='american' class='btn btn-border american btn-cusine'>American</label>
       </span>
       <span class='p-6 asian'>
-        <input type='radio' id='asian'name='cuisine' value='asian' />
-        <label for='asian' class='btn btn-border asian'>Asian</label>
+        <input type='radio' id='asian' name='cuisine' value='asian' />
+        <label for='asian' class='btn btn-border asian btn-cusine'>Asian</label>
       </span>
       <span class='p-6 indian'>
         <input type='radio' id='indian' name='cuisine' value='indian' />
-        <label for='indian' class='btn btn-border indian'>Indian</label>
+        <label for='indian' class='btn btn-border indian btn-cusine'>Indian</label>
       </span>
       <span class='p-6 italian'>
         <input type='radio' id='italian' name='cuisine' value='italian' />
-        <label for='italian'class='btn btn-border italian'>Italian</label>  
+        <label for='italian' class='btn btn-border italian btn-cusine'>Italian</label>
       </span>
       <span class='p-6 mexican'>
         <input type='radio' id='mexican' name='cuisine' value='mexican' />
-        <label for='mexican' class='btn btn-border mexican'>Mexican</label>
+        <label for='mexican' class='btn btn-border mexican btn-cusine'>Mexican</label>
       </span>
       {{!-- TODO - make this button work --}}
       <span class='p-6'>
         <input type='radio' id='a' name='cuisine' value='a' />
-        <label for='' class='btn-recipe btn-border picky'>I'm Not Picky</label>
+        <label for='' class='btn-recipe btn-border picky btn-cusine'>I'm Not Picky</label>
       </span>
 
       {{!-- <span class='p-2'>
@@ -34,11 +34,7 @@
     </div>
 
     <div class='form-group pt-3 text-center'>
-      <a
-        class='btn btn-dark btn-lg'
-        id='next-btn'
-        href='#ingredient-selection'
-      >Next</a>
+      <a class='btn btn-dark btn-lg' id='next-btn' href='#ingredient-selection'>Next</a>
     </div>
   </div>
 </div>
@@ -107,13 +103,13 @@
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='onion' />
           Onion
-        </label> 
+        </label>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='tomato' />
           Tomato
         </label>
       </div>
-     <div class='col-md-3 flex-column p-2'>
+      <div class='col-md-3 flex-column p-2'>
         <p>Starch:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='corn' />
@@ -127,7 +123,7 @@
           <input type='checkbox' name='ingredient' value='rice' />
           Rice
         </label>
-          <label class='checkbox'>
+        <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='pasta' />
           Pasta
         </label>
@@ -136,7 +132,7 @@
 
     <div class='pt-4'>
       <h5>I don't feel like looking in my fridge and pantry</h5>
-        <button class='btn btn-primary p-3 ' id='surprise-btn' type='submit'>Surprise
+      <button class='btn btn-primary p-3 ' id='surprise-btn' type='submit'>Surprise
         Me!</button>
     </div>
 

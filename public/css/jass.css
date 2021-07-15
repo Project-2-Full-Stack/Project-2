@@ -1011,61 +1011,44 @@ a:hover {
 }
 
 /* cuisine btns */
-.btn.btn-border.american {
+
+.btn.btn-cusine{
   border: 3px solid #444;
   padding: 150px 150px;
   height: 50px;
   width: auto;
-  background-image: url(https://prods3.imgix.net/images/articles/2017_03/Feature-Sous-Vide-Rib-Eye-Steak.jpg?auto=format%2Ccompress&dpr=1.5&ixjsv=2.2.3&q=66&w=750);
-  background-size: cover;
-}
-.btn.btn-border.asian {
-  border: 3px solid #444;
-  padding: 150px 150px;
-  height: 50px;
-  width: auto;
-  background-image: url(https://thewoksoflife.com/wp-content/uploads/2019/12/vegan-mapo-tofu-17.jpg);
-  background-size: cover;
-}
-.btn.btn-border.indian {
-  border: 3px solid #444;
-  padding: 150px 150px;
-  height: 50px;
-  width: auto;
-  background-image: url(https://www.recipetineats.com/wp-content/uploads/2018/07/Dal_2.jpg);
-  background-size: cover;
-}
-.btn.btn-border.italian {
-  border: 3px solid #444;
-  padding: 150px 150px;
-  height: 50px;
-  width: auto;
-  background-image: url(https://everylittlecrumb.com/wp-content/uploads/pinksaucepasta2-683x1024.jpg);
-  background-size: cover;
-}
-.btn.btn-border.mexican {
-  border: 3px solid #444;
-  padding: 150px 150px;
-  height: 50px;
-  width: auto;
-  background-image: url(https://iwashyoudry.com/wp-content/uploads/2018/11/Shrimp-Ceviche-Tostada-4-1.jpg);
   background-size: 417px 380px;
-}
-/* im not picky btn */
-.btn.btn-border {
-  border: 3px solid #444;
-  padding: 150px 150px;
-  height: 50px;
-  width: auto;
-  background-image: url(https://media.tenor.com/images/0c19b2cfdb668ab5c54ef090a8bbf12e/tenor.gif);
   background-blend-mode: overlay;
   background-position: center;
   background-size: cover;
 }
+.btn.btn-border.american {
+  background-image: url(https://prods3.imgix.net/images/articles/2017_03/Feature-Sous-Vide-Rib-Eye-Steak.jpg?auto=format%2Ccompress&dpr=1.5&ixjsv=2.2.3&q=66&w=750);
+}
+.btn.btn-border.asian {
+  background-image: url(https://thewoksoflife.com/wp-content/uploads/2019/12/vegan-mapo-tofu-17.jpg);
+}
+.btn.btn-border.indian {
+  background-image: url(https://www.recipetineats.com/wp-content/uploads/2018/07/Dal_2.jpg);
+}
+.btn.btn-border.italian {
+  background-image: url(https://everylittlecrumb.com/wp-content/uploads/pinksaucepasta2-683x1024.jpg);
+}
+.btn.btn-border.mexican {
+  background-image: url(https://iwashyoudry.com/wp-content/uploads/2018/11/Shrimp-Ceviche-Tostada-4-1.jpg);
+}
+
+/* im not picky btn */
+
 .btn.btn-border.picky{
+  background-image: url(https://media.tenor.com/images/0c19b2cfdb668ab5c54ef090a8bbf12e/tenor.gif);
   font-size: xx-large;
   font-weight: bolder;
   font-display: center;
+}
+
+.btn.btn-border {
+  border: 3px solid #444;
 }
 
 .btn.btn-sm {
