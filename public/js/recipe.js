@@ -53,7 +53,7 @@ let generateRecipeList = (recipes) => {
         <div class="card-body flex-row">
         <div class="flex-child p-2"><img src=${recipes[i].imgUrl}></div>
         <div class="flex-child flex-grow-6 p-2">${recipes[i].details}<br>
-        <a class='btn btn-info btn-sm' href="/recipe/${recipes[i].id}"> View </a>
+        <a class='btn btn-info btn-sm btn-bottom' href="/recipe/${recipes[i].id}"> View </a>
         </div>
         </div>
       </div>`;

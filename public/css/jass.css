@@ -1054,6 +1054,13 @@ a:hover {
   color: #1a1a1a;
 }
 
+.btn.btn-bottom{
+  display: block;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
 .btn.btn-border {
   border: 3px solid #444;
 }
