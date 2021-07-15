@@ -1,9 +1,11 @@
 // global variables
-// NEED TO ADD THE FOLLOWING FOR RENDER RECIPE CARD - TD
-// let recipeContainer = document.getElementById('recipeContainer');
+
+let getRandomRecipeNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 //TODO: add comment of what this function does
-const showRecipeHandler = (event) => {
+const showRecipeHandler = (event, getRandomRecipe) => {
     event.preventDefault();
 
     const selectedCuisine = document.querySelector('input[name="cuisine"]:checked') ? document.querySelector('input[name="cuisine"]:checked').value : '';
@@ -14,72 +16,49 @@ const showRecipeHandler = (event) => {
         ingredients.push(ingredient.value);
     }
 
+    if (!getRandomRecipe && ingredients.length === 0) {
+        alert('Please select at least one ingredient');
+        return;
+    }
+
     fetch(`/api/recipes`, {
         method: 'POST',
-        body: JSON.stringify({ category: selectedCuisine, ingredients: ingredients }),
+        body: JSON.stringify({ category: selectedCuisine, ingredients: ingredients, randomRecipe: getRandomRecipe }),
         headers: {
             'Content-Type': 'application/json',
         },
     }).then(function (response) {
         return response.json();
-    }).then(function (recipe) {
+    }).then(function (recipes) {
         let recipeId;
-        if (Object.keys(recipe).length === 0 && recipe.constructor === Object) {
-            recipeId = 1;
+        if (recipes.length === 0) {
+            recipeId = getRandomRecipeNumber(1, 15);
+            document.location.replace(`/recipe/${recipeId}`);
         } else {
-            recipeId = recipe.id;
+            generateRecipeList(recipes);
+            document.location.replace(`#recipes-list`);
         }
-        document.location.replace(`/recipe/${recipeId}`);
     });
 };
 
-//EVENTUALLY NEED THE FOLLOWING TO RENDER RECIPE CARD - TD
-//added from beatwave - Eventually will render Recipe Card onto page
-// function renderRecipeCard() {
-//     fetch(`/api/recipes`, {
-//         method: 'POST',
-//         body: JSON.stringify({category: selectedCuisine, ingredients: selectedIngredients}),
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-
-//     }).then(function (response) {
-//         console.log(response, 'fuck yeah',)
-//         // return response.json();
-//     }).then(function (data) {
-//         console.log('nailed it!') 
-
-// document.location.replace(`/recipe/${data.id}`);
-
-//   recipeContainer.innerHTML = '';
-//   data.daily.forEach((day, index) => {
-//     if (index === 0) {
-//       return;
-//     }
-//     let dayo = new Date(day.dt * 1000);
-//     var options = { weekday: 'long' };
-//     let tempForecast = day.temp.day;
-//     let conditionForecast = day.weather[0].description;
-//     let recipeCard = document.createElement('div');
-//     let temp = document.createElement('h1');
-//     let dayName = document.createElement('p');
-//     dayName.innerHTML = new Intl.DateTimeFormat('en-US', options).format(
-//       dayo
-//     );
-//     temp.innerHTML = tempForecast;
-//     recipeCard.style.backgroundColor = 'darkorange';
-//     recipeCard.style.border = '2px solid black';
-//     recipeCard.append(name);
-//     recipeCard.append(category);
-//     let details = document.createElement('p');
-//     details.innerHTML = conditionForecast;
-//     recipeCard.append(description);
-//     recipeContainer.append(recipeCard);
-//   });
-//     });
-// }
-
+let generateRecipeList = (recipes) => {
+    let recipesEl = document.querySelector('#recipes-list');
+    recipesEl.innerHTML = '';
+    let totalRecipes = recipes.length > 3 ? 3 : recipes.length;
+    for (let i = 0; i < totalRecipes; i++) {
+        console.log(recipes[i]);
+        recipesEl.innerHTML += `<div class="card my-5">
+        <div class="card-header"><a href="/recipe/${recipes[i].id}">${recipes[i].name}</a></div>
+        <div class="card-body"><img src=${recipes[i].imgUrl}>${recipes[i].details}</div>
+        <div class="card-footer">Yum/Yup button</div>
+      </div>`;
+    }
+}
 
 document
     .querySelector('#get-recipe-btn')
-    .addEventListener('click', showRecipeHandler);
+    .addEventListener('click', (e) => showRecipeHandler(e, false));
+
+document
+    .querySelector('#surprise-btn')
+    .addEventListener('click', (e) => showRecipeHandler(e, true));

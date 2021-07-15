@@ -13,40 +13,66 @@ let getRandomNumber = (max) => {
 //     `%${ingredients[i]}%`
 //   }
 // }
+let generatePreferences = (req) => {
+  let prefOptionsArray = {};
+  if (!req.session.user_meat) {
+    prefOptionsArray.hasMeat = false;
+  }
+  if (!req.session.user_dairy) {
+    prefOptionsArray.hasDairy = false;
+  }
+  if (!req.session.user_fish) {
+    prefOptionsArray.hasFish = false;
+  }
+  if (!req.session.user_gluten) {
+    prefOptionsArray.hasGluten = false;
+  }
+  return prefOptionsArray;
+}
 
+// a method to get recipes using user preferences and selected criteria
 router.post('/', async (req, res) => {
   const body = req.body;
-  try {
 
-    const recipeData = await Recipe.findAll({
-      where: {
-        category: body.category,
-        hasMeat: req.session.user_meat,
-        hasDairy: req.session.user_dairy,
-        hasFish: req.session.user_fish,
-        hasGluten: req.session.user_gluten,
-        [Op.or]: [
-          {
-            ingredients: {
-              [Op.like]: `%${body.ingredients[0]}%`
+  try {
+    // if user selected surprise me button, we will use selected category to return random recipe from the result
+    if (body.randomRecipe) {
+      const recipeData = await Recipe.findAll({
+        where: {
+          category: body.category,
+          ...generatePreferences(req)
+        }
+      });
+      const recipe = recipeData[getRandomNumber(recipeData.length - 1)].get({ plain: true });
+      res.status(200).json([recipe]);
+    } else {
+      // if user selected category and ingredients, we will use them to return matched recipes
+      const recipeData = await Recipe.findAll({
+        where: {
+          category: body.category,
+          ...generatePreferences(req),
+          [Op.or]: [ // TODO: replace this with dynamic filter where user can have any number of ingredients
+            {
+              ingredients: {
+                [Op.like]: `%${body.ingredients[0]}%`
+              }
+            },
+            {
+              ingredients: {
+                [Op.like]: `%${body.ingredients[1]}%`
+              }
+            },
+            {
+              ingredients: {
+                [Op.like]: `%${body.ingredients[2]}%`
+              }
             }
-          },
-          {
-            ingredients: {
-              [Op.like]: `%${body.ingredients[1]}%`
-            }
-          },
-          {
-            ingredients: {
-              [Op.like]: `%${body.ingredients[2]}%`
-            }
-          }
-        ]
-      }
-    });
-    // TODO: replace 0 with random number between 0 and recipeData.length
-    const recipe = recipeData[getRandomNumber(recipeData.length - 1)].get({ plain: true })
-    res.status(200).json(recipe);
+          ]
+        }
+      });
+      res.status(200).json(recipeData);
+    }
+
   } catch (err) {
     res.status(400).json(err);
   }
