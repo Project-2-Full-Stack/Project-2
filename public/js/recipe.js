@@ -6,7 +6,7 @@
 const showRecipeHandler = (event) => {
     event.preventDefault();
 
-    const selectedCuisine = document.querySelector('input[name="cuisine"]:checked').value || '';
+    const selectedCuisine = document.querySelector('input[name="cuisine"]:checked') ? document.querySelector('input[name="cuisine"]:checked').value : '';
     const selectedIngredients = document.querySelectorAll('input[name="ingredient"]:checked') || '';
 
     let ingredients = [];
@@ -42,40 +42,40 @@ const showRecipeHandler = (event) => {
 //         headers: {
 //             'Content-Type': 'application/json',
 //         },
-        
+
 //     }).then(function (response) {
 //         console.log(response, 'fuck yeah',)
 //         // return response.json();
 //     }).then(function (data) {
 //         console.log('nailed it!') 
 
-        // document.location.replace(`/recipe/${data.id}`);
+// document.location.replace(`/recipe/${data.id}`);
 
-    //   recipeContainer.innerHTML = '';
-    //   data.daily.forEach((day, index) => {
-    //     if (index === 0) {
-    //       return;
-    //     }
-    //     let dayo = new Date(day.dt * 1000);
-    //     var options = { weekday: 'long' };
-    //     let tempForecast = day.temp.day;
-    //     let conditionForecast = day.weather[0].description;
-    //     let recipeCard = document.createElement('div');
-    //     let temp = document.createElement('h1');
-    //     let dayName = document.createElement('p');
-    //     dayName.innerHTML = new Intl.DateTimeFormat('en-US', options).format(
-    //       dayo
-    //     );
-    //     temp.innerHTML = tempForecast;
-    //     recipeCard.style.backgroundColor = 'darkorange';
-    //     recipeCard.style.border = '2px solid black';
-    //     recipeCard.append(name);
-    //     recipeCard.append(category);
-    //     let details = document.createElement('p');
-    //     details.innerHTML = conditionForecast;
-    //     recipeCard.append(description);
-    //     recipeContainer.append(recipeCard);
-    //   });
+//   recipeContainer.innerHTML = '';
+//   data.daily.forEach((day, index) => {
+//     if (index === 0) {
+//       return;
+//     }
+//     let dayo = new Date(day.dt * 1000);
+//     var options = { weekday: 'long' };
+//     let tempForecast = day.temp.day;
+//     let conditionForecast = day.weather[0].description;
+//     let recipeCard = document.createElement('div');
+//     let temp = document.createElement('h1');
+//     let dayName = document.createElement('p');
+//     dayName.innerHTML = new Intl.DateTimeFormat('en-US', options).format(
+//       dayo
+//     );
+//     temp.innerHTML = tempForecast;
+//     recipeCard.style.backgroundColor = 'darkorange';
+//     recipeCard.style.border = '2px solid black';
+//     recipeCard.append(name);
+//     recipeCard.append(category);
+//     let details = document.createElement('p');
+//     details.innerHTML = conditionForecast;
+//     recipeCard.append(description);
+//     recipeContainer.append(recipeCard);
+//   });
 //     });
 // }
 
