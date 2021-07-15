@@ -1,43 +1,31 @@
 <div id='cuisine-selection' class='row justify-center-md'>
   <div class='col-md-8 radio-button radio-toolbar'>
     <h4>What kind of cuisine are you in the mood for?</h4>
-    <div class='flex-row'>
-      <span class='p-6 american'>
+    <div class='row mt-5'>
+      <span class='col-6 mb-5'>
         <input type='radio' id='american' name='cuisine' value='american' />
-        <label
-          for='american'
-          class='btn btn-border american btn-cusine'
-        >American</label>
+        <label for='american' class='btn btn-border american btn-cuisine'>American</label>
       </span>
-      <span class='p-6 asian'>
+      <span class='col-6 mb-5'>
         <input type='radio' id='asian' name='cuisine' value='asian' />
-        <label for='asian' class='btn btn-border asian btn-cusine'>Asian</label>
+        <label for='asian' class='btn btn-border asian btn-cuisine'>Asian</label>
       </span>
-      <span class='p-6 indian'>
+      <span class='col-6 mb-5'>
         <input type='radio' id='indian' name='cuisine' value='indian' />
-        <label
-          for='indian'
-          class='btn btn-border indian btn-cusine'
-        >Indian</label>
+        <label for='indian' class='btn btn-border indian btn-cuisine'>Indian</label>
       </span>
-      <span class='p-6 italian'>
+      <span class='col-6 mb-5'>
         <input type='radio' id='italian' name='cuisine' value='italian' />
-        <label
-          for='italian'
-          class='btn btn-border italian btn-cusine'
-        >Italian</label>
+        <label for='italian' class='btn btn-border italian btn-cuisine'>Italian</label>
       </span>
-      <span class='p-6 mexican'>
+      <span class='col-6 mb-5'>
         <input type='radio' id='mexican' name='cuisine' value='mexican' />
-        <label
-          for='mexican'
-          class='btn btn-border mexican btn-cusine'
-        >Mexican</label>
+        <label for='mexican' class='btn btn-border mexican btn-cuisine'>Mexican</label>
       </span>
       {{! TODO - make this button work }}
-      <span class='p-6'>
+      <span class='col-6 mb-5'>
         <input type='radio' id='a' name='cuisine' value='a' />
-        <label for='a' class='btn btn-recipe btn-border picky btn-cusine'>I'm Not
+        <label for='a' class='btn btn-recipe btn-border picky btn-cuisine'>I'm Not
           Picky</label>
       </span>
 
@@ -47,11 +35,7 @@
     </div>
 
     <div class='form-group pt-3 text-center'>
-      <a
-        class='btn btn-dark btn-lg'
-        id='next-btn'
-        href='#ingredient-selection'
-      >Next</a>
+      <a class='btn btn-dark btn-lg' id='next-btn' href='#ingredient-selection'>Next</a>
     </div>
   </div>
 </div>
@@ -149,11 +133,7 @@
 
     <div class='pt-4'>
       <h5>I don't feel like looking in my fridge and pantry</h5>
-      <button
-        class='btn btn-primary p-3'
-        id='surprise-btn'
-        type='submit'
-      >Surprise Me!</button>
+      <button class='btn btn-primary p-3' id='surprise-btn' type='submit'>Surprise Me!</button>
     </div>
 
     <div class='form-group pt-5 text-center'>
