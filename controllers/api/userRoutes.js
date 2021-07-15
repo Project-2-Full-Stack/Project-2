@@ -37,6 +37,10 @@ router.put('/update', async (req, res) => {
         },
       }
     );
+    req.session.user_meat = req.body.eatsMeat;
+    req.session.user_dairy = req.body.eatsDairy;
+    req.session.user_fish = req.body.eatsFish;
+    req.session.user_gluten = req.body.eatsGluten;
     res.status(200).json(userData);
   } catch (err) {
     res.status(500).json(err);
