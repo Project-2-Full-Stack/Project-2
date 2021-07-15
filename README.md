@@ -4,6 +4,8 @@
 
 Thyme is Money is an application that helps the user to solve the age-old question, “What do I want for dinner”. After initially creating an account on the application, the user is prompted to input their dietary preferences. Using those preferences, our application will prompt the user to input their preferred cuisine that day, as well as ingredients on hand, and generate a recipe for a dish that they can prepare for dinner. 
 
+Deployed on Heroku: https://thyme-is-money.herokuapp.com/
+
 ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -32,6 +34,9 @@ Thyme is Money is an application that helps the user to solve the age-old questi
 ## License
   Licensed under the MIT license
 
-
+## Sample Images of App: 
 ![thyme is money signup](./public/image/proj2-signup.JPG)
 ![thyme is money login](./public/image/proj2-login.JPG)
+![thyme is money cuisine selection](./public/image/proj2-cuisine.JPG)
+![thyme is money ingredients selection](./public/image/proj2-ingredients.JPG)
+![thyme is money recipe](./public/image/proj2-recipe.JPG)
