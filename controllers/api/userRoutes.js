@@ -10,6 +10,10 @@ router.post('/', async (req, res) => {
       req.session.logged_in = true;
 
       // TODO: save preferences to session
+      req.session.user_meat = userData.eatsMeat;
+      req.session.user_dairy = userData.eatsDairy;
+      req.session.user_fish = userData.eatsFish;
+      req.session.user_gluten = userData.eatsGluten;
 
       res.status(200).json(userData);
     });
@@ -62,6 +66,12 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+
+      // TODO: save preferences to session
+      req.session.user_meat = userData.eatsMeat;
+      req.session.user_dairy = userData.eatsDairy;
+      req.session.user_fish = userData.eatsFish;
+      req.session.user_gluten = userData.eatsGluten;
 
       res.json({ user: userData, message: 'You are now logged in!' });
     });

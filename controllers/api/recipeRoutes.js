@@ -21,6 +21,10 @@ router.post('/', async (req, res) => {
     const recipeData = await Recipe.findAll({
       where: {
         category: body.category,
+        hasMeat: req.session.user_meat,
+        hasDairy: req.session.user_dairy,
+        hasFish: req.session.user_fish,
+        hasGluten: req.session.user_gluten,
         [Op.or]: [
           {
             ingredients: {
