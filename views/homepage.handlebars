@@ -1,17 +1,32 @@
 <div id='cuisine-selection' class='row justify-center-md'>
   <div class='col-md-8 radio-button radio-toolbar'>
-    <p>What do you feel like?</p>
-    <input type='radio' id='american' name='cuisine' value='american' />
-    <label for='american' class='btn btn-border'>American</label>
-    <input type='radio' id='asian'name='cuisine' value='asian' />
-    <label for='asian' class='btn btn-border'>Asian</label>
-    <input type='radio' id='indian' name='cuisine' value='indian' />
-    <label for='indian' class='btn btn-border'>Indian</label>
-    <input type='radio' id='italian' name='cuisine' value='italian' />
-    <label for='italian'class='btn btn-border'>Italian</label>
-    <input type='radio' id='mexican' name='cuisine' value='mexican' />
-    <label for='mexican' class='btn btn-border'>Mexican</label>
-    <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
+    <h4>What kind of cuisine are you in the mood for?</h4>
+    <div class='flex-row'>
+      <span class='p-2'>
+        <input type='radio' id='american' name='cuisine' value='american' />
+        <label for='american' class='btn btn-border'>American</label>
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='asian'name='cuisine' value='asian' />
+        <label for='asian' class='btn btn-border'>Asian</label>
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='indian' name='cuisine' value='indian' />
+        <label for='indian' class='btn btn-border'>Indian</label>
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='italian' name='cuisine' value='italian' />
+        <label for='italian'class='btn btn-border'>Italian</label>  
+      </span>
+      <span class='p-2'>
+        <input type='radio' id='mexican' name='cuisine' value='mexican' />
+        <label for='mexican' class='btn btn-border'>Mexican</label>
+      </span>
+      <span class='p-2'>
+        <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise Me!</button>
+      </span>
+    </div>
+
     <div class='form-group pt-3 text-center'>
       <a
         class='btn btn-dark btn-lg'
@@ -21,12 +36,14 @@
     </div>
   </div>
 </div>
+
+{{!-- These are the ingredient checkboxes for what's in the user's fridge --}}
 <div id='ingredient-selection' class='row mt-5 justify-center-md'>
   <div class='col-md-8 radio-button'>
-    <p>What do you have in your fridge?</p>
-    <div class='row'>
-      <div class='col-md-3'>
-        <p>Dairy</p>
+    <h4>What do you currently have in your fridge and pantry?</h4>
+    <div class='flex-row'>
+      <div class='col-md-3 flex-column p-2'>
+        <p>Dairy:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='butter' />
           Butter
@@ -35,58 +52,89 @@
           <input type='checkbox' name='ingredient' value='cheese' />
           Cheese
         </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='cream' />
+          Cream
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='yogurt' />
+          Yogurt
+        </label>
       </div>
-      <div class='col-md-3'>
-        <p>Protein</p>
-
+      <div class='col-md-3 flex-column p-2'>
+        <p>Protein:</p>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='chicken' />
+          Chicken
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='egg' />
+          Eggs
+        </label>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='shrimp' />
           Shrimp
         </label>
         <label class='checkbox'>
-          <input type='checkbox' name='ingredient' value='tofu' />
-          Tofu
-        </label>
-        <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='salmon' />
           Salmon
         </label>
-      </div>
-      <div class='col-md-3'>
-        <p>Produce</p>
         <label class='checkbox'>
-          <input type='checkbox' name='ingredient' value='onion' />
-          Green Onion
+          <input type='checkbox' name='ingredient' value='tofu' />
+          Tofu
         </label>
+      </div>
+      <div class='col-md-3 flex-column p-2'>
+        <p>Produce:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='garlic' />
           Garlic
         </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='ginger' />
+          Ginger
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='lemon' />
+          Lemon
+        </label>
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='onion' />
+          Onion
+        </label> 
+        <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='tomato' />
+          Tomato
+        </label>
       </div>
-      <div class='col-md-3'>
-        <p>Starch</p>
+     <div class='col-md-3 flex-column p-2'>
+        <p>Starch:</p>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='corn' />
           Corn Starch
         </label>
         <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='flour' />
+          Flour
+        </label>
+        <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='rice' />
           Rice
         </label>
-        <label class='checkbox'>
-          <input type='checkbox' name='ingredient' value='flour' />
-          All Purpose Flour
+          <label class='checkbox'>
+          <input type='checkbox' name='ingredient' value='pasta' />
+          Pasta
         </label>
       </div>
     </div>
 
-    <div class='pt-3'>
-      <p>I don't feel like looking into my fridge</p>
-      <button class='btn btn-primary' id='surprise-btn' type='submit'>Surprise
+    <div class='pt-4'>
+      <h5>I don't feel like looking in my fridge and pantry</h5>
+        <button class='btn btn-primary p-3 ' id='surprise-btn' type='submit'>Surprise
         Me!</button>
     </div>
 
-    <div class='form-group pt-3 text-center'>
+    <div class='form-group pt-5 text-center'>
       <a class='btn btn-info btn-lg' id='get-recipe-btn' type='submit'>Lets Eat!</a>
     </div>
   </div>
