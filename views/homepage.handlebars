@@ -1,6 +1,6 @@
 <div id='cuisine-selection' class='row my-5 justify-center-md'>
   <div class='col-md-8 radio-button radio-toolbar'>
-    <h4>What kind of cuisine are you in the mood for?</h4>
+    <h2>What kind of cuisine are you in the mood for?</h2>
     <div class='row my-5'>
       <span class='col-6 mb-5'>
         <input type='radio' id='american' name='cuisine' value='american' />
@@ -45,10 +45,10 @@
 {{! These are the ingredient checkboxes for what's in the user's fridge }}
 <div id='ingredient-selection' class='row my-5 justify-center-md'>
   <div class='col-md-8 radio-button'>
-    <h4>What do you currently have in your fridge and pantry?</h4>
+    <h2>What do you currently have in your fridge and pantry?</h2>
     <div class='flex-row my-5'>
       <div class='col-md-3 flex-column p-2'>
-        <p>Dairy:</p>
+        <h5>Dairy</h5>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='butter' />
           Butter
@@ -67,7 +67,7 @@
         </label>
       </div>
       <div class='col-md-3 flex-column p-2'>
-        <p>Protein:</p>
+        <h5>Protein</h5>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='chicken' />
           Chicken
@@ -90,7 +90,7 @@
         </label>
       </div>
       <div class='col-md-3 flex-column p-2'>
-        <p>Produce:</p>
+        <h5>Produce</h5>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='garlic' />
           Garlic
@@ -113,7 +113,7 @@
         </label>
       </div>
       <div class='col-md-3 flex-column p-2'>
-        <p>Starch:</p>
+        <h5>Starch</h5>
         <label class='checkbox'>
           <input type='checkbox' name='ingredient' value='corn' />
           Corn Starch
@@ -133,9 +133,9 @@
       </div>
     </div>
 
-    <div class='pt-4'>
-      <h5>I don't feel like looking in my fridge and pantry</h5>
-      <button class='btn btn-primary p-3' id='surprise-btn' type='submit'>Surprise Me!</button>
+    <div class='pt-4 flex-row'>
+      <h5 class="flex-child flex-grow-6">I don't feel like looking in my fridge and pantry...</h5>
+      <button class='btn btn-primary p-3 flex-child' id='surprise-btn' type='submit'>Surprise Me!</button>
     </div>
 
     <div class='form-group pt-5 text-center'>
@@ -148,7 +148,6 @@
 
 <div id='recipes-container' class='row my-5 justify-center-md'>
   <div class='col-md-8'>
-    <h4>Here are our recommendations</h4>
     <div id="recipes-list"></div>
     {{!-- TODO: phase 2 --}}
     {{!-- <div class='form-group pt-5 text-center'>

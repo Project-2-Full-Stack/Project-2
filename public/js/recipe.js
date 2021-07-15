@@ -45,6 +45,7 @@ let generateRecipeList = (recipes) => {
     let recipesEl = document.querySelector('#recipes-list');
     recipesEl.innerHTML = '';
     let totalRecipes = recipes.length > 3 ? 3 : recipes.length;
+    recipesEl.innerHTML += `<h2>Here are our recommendations...</h2>`;
     for (let i = 0; i < totalRecipes; i++) {
         console.log(recipes[i]);
         recipesEl.innerHTML += `<div class="card my-5">
