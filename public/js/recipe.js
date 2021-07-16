@@ -32,6 +32,7 @@ const showRecipeHandler = (event, getRandomRecipe) => {
     }).then(function (recipes) {
         let recipeId;
         if (recipes.length === 0) {
+            alert('Sorry, there are no recipes in this database that match your criteria - we think you should try this instead!');
             recipeId = getRandomRecipeNumber(1, 15);
             document.location.replace(`/recipe/${recipeId}`);
         } else {
